@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    <div class="container-xxl bg-white p-0">
+
+        @await Component.InvokeAsync("_SpinnerPartial")
+        
+        <!-- Header Start -->
+        @await Component.InvokeAsync("_NavbarPartial")
+        
+        <!-- Header End -->
+        @await Component.InvokeAsync("_BookingCoverPartial")
+        
+
+        <!-- Booking Start -->
+        @*@await Component.InvokeAsync("_ReservationPartial")*@
+        <!-- Booking End -->
+
+        @await Html.PartialAsync("/Views/Booking/AddBookingPartial.cshtml")
+
+        <!-- Newsletter Start -->
+        @await Html.PartialAsync("/Views/Default/_SubscribePartial.cshtml")
+        <!-- Newsletter Start -->
+
+
+        <!-- Footer Start -->
+        @await Component.InvokeAsync("_FooterPartial")
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    @await Component.InvokeAsync("_ScripstPartial")
+    
+</body>
+
+</html>

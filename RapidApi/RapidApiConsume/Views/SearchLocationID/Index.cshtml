@@ -1,0 +1,34 @@
+﻿@model List<BookingApiLocationSearchVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Rapid Api Üzerinden Film Listesi Getirir</h1>
+
+<div class="container">
+    <br />
+    @using (Html.BeginForm("Index","SearchLocationID",FormMethod.Post))
+    {
+                <label>Şehir Adını Giriniz</label>
+                <input type="text" class="form-control" name="cityName"/>
+
+                <br />
+
+                <button class="btn btn-primary"> Şehir Bul</button>
+    }      
+    <table class="table table-hover table-responsive">
+        <tr>
+            <th>Lokasyon</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.dest_id</td>
+            </tr>
+        }
+    </table>
+    <br />
+
+    <a href="BookingByCity/Index" class="btn btn-outline-dark">Yeni Otel Rezervayon Bilgisi</a>
+</div>
+

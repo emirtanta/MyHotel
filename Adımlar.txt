@@ -1,0 +1,36 @@
+
+* Api test ve swagger
+
+* FrontEnd kýsmýndaki GuestCOntroller AdminGuestController olarak ismi deðiþtirilecek
+
+* WebUI tarafýndaki MessageCategoryController silinecek
+
+---------- Sosyal Medya Takipçi Apileri Ýçin---
+
+=> Rapid Api sitesinden Ýnstagram Profile apisine üye ol.
+
+=> GetProfileInfo kýsmýna bas ve username kýsmýna bir kullanýcý adý yaz Test Endpoint kýsmýna bastýktan sonra Resýlt kýsmýndan flowers ve flowing kýsmý al
+
+=> ExampleResponse kýsmýndan da Copy'ile kopyala ve Visual Studio/Edit/PasteSpecial/Json tipini seç ve ResultInstagramFollowersDto içerisine kopyala
+
+=> Ýþlemler _DashboardSubscribeCountPartial.cs içerisinde yapýldý
+
+**Twitter takipçi sayýsýný rapi api üzerinden alma
+
+=> Twitter(social Miner) kýsmýna abone ol
+
+=> Endpointlerden Profile kýsmýný seç 
+
+=> Ýþlemler _DashboardSubscribeCountPartial.cs içerisinde yapýldý
+
+**Linkein takipçi sayýsýný rapi api üzerinden çekme
+
+=> Fresh Linkedin Profile Data olaný seç
+
+=> Abone Ol
+
+=> Endpointlerden Get LinkedIn Profile Data kýsmýný seç
+
+Visual Studio/Edit/PasteSpecial/Json tipini seç ve ResultLikendInFollowersDto içerisine kopyala
+
+

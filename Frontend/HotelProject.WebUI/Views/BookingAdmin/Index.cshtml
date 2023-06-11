@@ -1,0 +1,45 @@
+﻿@model List<ResultBookingDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+
+    int count = 0;
+}
+
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+
+            <tr>
+                <th>#</th>
+                <th>Misafir</th>
+                <th>Giriş Tarihi</th>
+                <th>Çıkış Tarihi</th>
+                <th>Durum</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <th>@count</th>
+                    <td>@item.Name</td>
+                    <td>@item.Checkin.ToShortDateString()</td>
+                    <td>@item.CheckOut.ToShortDateString()</td>
+                    <td>@item.Status</td>
+                    <td>
+                        <a href="/BookingAdmin/ApprovedReservation2/@item.BookingID" class="btn btn-outline-primary">Onayla</a>
+                        <a href="/BookingAdmin/CancelReservation/@item.BookingID" class="btn btn-outline-danger">İptal Et</a>
+                        <a href="/BookingAdmin/WaitReservation/@item.BookingID" class="btn btn-outline-warning">Beklet</a>
+                        <a href="/BookingAdmin/UpdateBooking/@item.BookingID" class="btn btn-outline-info">Güncelle</a>
+                        <a href="/BookingAdmin/UpdateBooking/@item.BookingID" class="btn btn-outline-dark">Detaylar</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

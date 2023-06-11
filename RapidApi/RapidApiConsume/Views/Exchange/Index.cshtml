@@ -1,0 +1,24 @@
+﻿@model List<ExchangeVM.Exchange_Rates>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center"> Rapid Api Üzerinden Döviz Kurlarını Getirir</h1>
+<div class="container">
+    <br />
+    <table class="table table-hover table-responsive">
+        <tr>
+            <th>Döviz Kodu</th>
+            <th>Birim Fiyat</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.currency</td>
+                <td>@item.exchange_rate_buy</td>
+            </tr>
+        }
+    </table>
+</div>
+
